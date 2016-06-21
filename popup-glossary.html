@@ -1,0 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-tooltip/paper-tooltip.html">
+<dom-module id="popup-glossary">
+  <template>
+    <style>
+      :host{
+        position: relative;
+        --paper-tooltip: {
+          font-size: 15px;
+          font-family: sans-serif;
+        }
+      }
+
+      .holder {
+        cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;    
+        display: inline;
+        border-top: dashed 1px blue; 
+        border-bottom: dashed 1px blue; 
+      }
+
+    </style>
+      <div class="holder" id="btn"><content></content></div>
+      <paper-tooltip for="btn">{{definition}}</paper-tooltip>
+  </template>
+ </dom-module>
+<script>
+  Polymer({
+      is: 'popup-glossary',
+      properties: {
+        definition: {
+          type: 'string'
+        }
+      }
+    });
+  </script>

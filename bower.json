@@ -1,0 +1,8 @@
+{
+  "name": "popup-glossary",
+  "version": "0.0.1",
+  "dependencies": {
+    "polymer": "^1.5.0",
+    "paper-tooltip": "PolymerElements/paper-tooltip#^1.1.2"
+  }
+}
